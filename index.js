@@ -10,8 +10,8 @@ mongoose.connect(process.env.MONGO_URL).then(() => console.log('DBconnection Suc
     console.log(err);
 });
 
-
-app.use("/api/user", userRoute); //whenever we go to api/user our application will use userRoute (code mean)
+app.use(express.json());  //if we donst write this kod our postman doesnt work with json file 
+app.use("/api/users", userRoute); //whenever we go to api/user our application will use userRoute (code mean)
 
 //   app.get("/api/test", () => {
 //     console.log('test is successfull')

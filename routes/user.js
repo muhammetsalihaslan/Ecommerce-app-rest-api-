@@ -1,16 +1,23 @@
+const { verifyToken, verifyTokenAndAuthorization } = require("./verifyToken");
 const router = require('express').Router();
 
 
+router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
+    if(req.body.password){
+       req.body.password = CryptoJS.AES.encrypt( req.body.password , process.env.PASS_SEC).toString();
+    }
 
-module.exports = router  //basically we are wxporting our user
+    try {
+        const updatedUser = await User.findByIdAndUpdate(req.params.id,{
+            $set: req.body
+        }, {new: true});
+        res.status(200).json(updatedUser);
+    } catch (err) {
+        res.status(500).json(err);
+    }
 
-// router.get("/usertest", (req, res) => {
-//     res.send("user test is successful");
-// });
 
-//!post method
+});
 
-// router.post("/userposttest", (req, res) => {
-//     const username = req.body.username;
-//     res.send("your username is: " + username);
-// })  // we sould use postman to test it 
+module.exports = router 
+

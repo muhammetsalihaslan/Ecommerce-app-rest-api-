@@ -31,6 +31,18 @@ in this tutorial always has 3 part and i comunicated this 3 part each other to w
 get user stats show us statistic of enter user 
 
 
+we get assets name in modules and create function in routers, which is sent in postman, all routers have to import in index.js
+
+if we get 500s problem in post man we could look at all const truly send or not 
+
+//   app.get("/api/test", () => {
+//     console.log('test is successfull')
+//   })  //!create roots so i am creating rest api we are gonna use some endpoints  but here its not a good idea to write /api/test we sould to create routes folder
+
+
+verifyTokenAndAdmin: its about who can react this data and use can change data 
+
+
 
 
 

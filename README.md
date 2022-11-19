@@ -22,7 +22,13 @@ what is jwt: JSON Web Token (JWT) is an open standard (RFC 7519) that defines a 
 
 next() is about jwt
 
+we have to import User.js for delete update put and other staff in user.js
 
+user.js part is comunicate and have to act in postman part 
+
+in this tutorial always has 3 part and i comunicated this 3 part each other to work 
+
+get user stats show us statistic of enter user 
 
 
 

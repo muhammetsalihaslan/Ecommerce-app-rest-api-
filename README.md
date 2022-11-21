@@ -42,6 +42,20 @@ if we get 500s problem in post man we could look at all const truly send or not
 
 verifyTokenAndAdmin: its about who can react this data and use can change data 
 
+WHAT AM I LEARNİNG
+
+models: we have create our postman parts schema in models part all model have to export and also mongoose have to import in models js
+
+routers:
+
+ //! which is created instead of user.js best practise is this 
+
+get/post/put saparated using in routers part 
+
+verifyaToken is shows us limits of user and admin somewhere only admin manage which is named verifytokenandAdmin in some place both of them manage 
+
+async/await/trycatch is much important to build structure of rest api 
+
 
 
 
